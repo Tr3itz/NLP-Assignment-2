@@ -5,11 +5,11 @@ The selected LLM is **Llama-70b-Chat** from Meta whose context window consists i
  
  ## Structure
  The project is composed of 2 Python scripts:
- 1. **Document.py** -> Python class used to represent the document, and to manage the slicing process. Slices are built up from sentences until they fix the context window, so that they are composed of full sentences. The slicing process is carried out through the following steps:
-   1.  if the document fits in the context window of the LLM, then it's the only slice to be returned
-   2.  
-   3. otherwise the text is divided into sentences
-   4. for each sentence:
+
+**Document.py** -> Python class used to represent the document, and to manage the slicing process. Slices are built up from sentences until they fix the context window, so that they are composed of full sentences. The slicing process is carried out through the following steps:
+   1.  if the document fits in the context window of the LLM, then it's the only slice to be returned 
+   2. otherwise the text is divided into sentences
+   3. for each sentence:
       1. until the first slice hasn't been created, it is added to it
       2. if adding the sentence to the first slice makes it exceed the context window, the slice is added to the list, and we start creating the next slice from the second sentence of the first slice until this sentence that would've exceeded the context window
       3. add the sentence to the new slice to be created, and remove the first sentence on the list until the new slice is different enough (in terms of *cosine similarty* of the bag of words) from the first one
@@ -21,12 +21,12 @@ The selected LLM is **Llama-70b-Chat** from Meta whose context window consists i
   The similarity between two slices is measured with **cosine similarity** on the bag of words of the slices, in which the freqquencies of the words are normalized depending on the length of the document. Two slices are considered to be similar if they're cosine similarity is greater than 0.8.
 
   In order to create the bag of words, the following pre-processing steps are taken on text:
-    1. *punctuation removal*
-    2. *tokenization*
-    3. *stopwords removal*
-    4. *stemming*
+  1. *punctuation removal*
+  2. *tokenization*
+  3. *stopwords removal*
+  4. *stemming*
 
- 2. **main.py** -> The main script that feeds each slice to the LLM, and retrieves the answers.
+**main.py** -> The main script that feeds each slice to the LLM, and retrieves the answers.
 
 ## Dependencies
 The following dependencies are used throughout the project:
