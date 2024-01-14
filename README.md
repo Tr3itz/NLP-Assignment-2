@@ -6,10 +6,10 @@ The selected LLM is **Llama-70b-Chat** from Meta whose context window consists i
  ## Structure
  The project is composed of 2 Python scripts:
  1. **Document.py** -> Python class used to represent the document, and to manage the slicing process. Slices are built up from sentences until they fix the context window, so that they are composed of full sentences. The slicing process is carried out through the following steps:
-
-   1. if the document fits in the context window of the LLM, then it's the only slice to be returned
-   2. otherwise the text is divided into sentences
-   3. for each sentence:
+   1.  if the document fits in the context window of the LLM, then it's the only slice to be returned
+   2.  
+   3. otherwise the text is divided into sentences
+   4. for each sentence:
       1. until the first slice hasn't been created, it is added to it
       2. if adding the sentence to the first slice makes it exceed the context window, the slice is added to the list, and we start creating the next slice from the second sentence of the first slice until this sentence that would've exceeded the context window
       3. add the sentence to the new slice to be created, and remove the first sentence on the list until the new slice is different enough (in terms of *cosine similarty* of the bag of words) from the first one
