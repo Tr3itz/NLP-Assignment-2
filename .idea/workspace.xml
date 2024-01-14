@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dffc6c3-e3d7-4f47-820d-8d8ab5e54a87" name="Changes" comment="">
+    <list default="true" id="4dffc6c3-e3d7-4f47-820d-8d8ab5e54a87" name="Changes" comment="Initial commit">
       <change afterPath="$PROJECT_DIR$/.idea/NLP-Assignment-2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
@@ -13,6 +13,7 @@
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/fitting_window.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docs/over-2048_tokens.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docs/over-7000_tokens.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -72,6 +73,19 @@
       <option name="presentableId" value="Default" />
       <updated>1704877179229</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1705251700853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705251700853</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
