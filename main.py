@@ -1,3 +1,4 @@
+from getpass import getpass
 from openai import OpenAI
 from Document import Document
 
@@ -16,6 +17,8 @@ def build_api_request(prompt: str) -> list:
 
 
 def main():
+    key = getpass('Insert api key: ')
+
     doc: Document = Document('docs/fitting_window.txt')
 
     print('Slicing the text...\n')
@@ -26,7 +29,7 @@ def main():
     print(f'It exceeds the context window.') if doc.length > 2048 else print(f'It fits the context window.')
 
     model = OpenAI(
-        api_key='LL-bDBHeZSxqwypHsiqBM8vyhYHuKWQqQEBwPbOyjFp0WVmbSsnlykFyUTx9b2UPgm6',
+        api_key=key,
         base_url='https://api.llama-api.com'
     )
 
