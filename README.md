@@ -26,6 +26,11 @@ The selected LLM is **Llama-70b-Chat** from Meta whose context window consists i
   3. *stopwords removal*
   4. *stemming*
 
+The document on which the project has been tested are in the *docs* directory:
+1. one document fitting the context window (605 tokens)
+2. one document just over the context window (~ 2500 tokens)
+3. one document that exceeds the context window by a discrete amount (~ 7000 tokens)
+
 **main.py** -> The main script that feeds each slice to the LLM, and retrieves the answers.
 
 ## Dependencies
